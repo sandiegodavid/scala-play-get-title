@@ -1,1 +1,1 @@
-web: activator run -Dhttp.port=${PORT}
+web: ./activator run -Dhttp.port=${PORT}
