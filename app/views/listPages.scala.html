@@ -1,0 +1,29 @@
+@(pages: Seq[PageTitle], form: Form[String])(implicit messages: play.api.i18n.Messages, request: RequestHeader, csrfConfig: play.filters.csrf.CSRFConfig)
+
+@main("PageTitles") {
+
+  <h1>PageTitles</h1>
+  <table border="1">
+    <thead>
+      <tr><th>Page URL</th><th>Page Title</th>
+    </thead>
+    <tbody>
+    @for(p <- pages) {
+      <tr><td>@p.pageUrl</td><td>@p.title</td></tr>
+    }
+    </tbody>
+  </table>
+
+  <hr/>
+
+  @helper.form(routes.Application.createPageTitleEntry) {
+
+    @helper.CSRFshim.formField
+
+    @helper.inputText(form("pageUrl"))
+
+    <button type="submit">Get page title</button>
+
+  }
+
+}
