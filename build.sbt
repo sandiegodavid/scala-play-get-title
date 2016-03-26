@@ -15,3 +15,4 @@ resolvers ++= Seq(
   Resolver.bintrayRepo("scalaz", "releases"),
   Resolver.bintrayRepo("megamsys", "scala")
 )
+addSbtPlugin("com.heroku" % "sbt-heroku" % "0.5.1")
