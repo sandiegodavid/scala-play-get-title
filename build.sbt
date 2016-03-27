@@ -13,5 +13,6 @@ resolvers ++= Seq(
   Resolver.sonatypeRepo("releases"),
   Resolver.sonatypeRepo("snapshots"),
   Resolver.bintrayRepo("scalaz", "releases"),
-  Resolver.bintrayRepo("megamsys", "scala")
+  Resolver.bintrayRepo("megamsys", "scala"),
+  "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
 )
